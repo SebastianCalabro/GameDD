@@ -1,5 +1,6 @@
 import express, {Application, Request , Response} from "express";
 import productRoutes from "../routes/product"
+import db from "../db/connection"
 
 class Server {
 private app: Application;
@@ -10,6 +11,7 @@ constructor() {
     this.port = process.env.PORT || "3001";
     this.listen();
     this.routes();
+    this.dbConnect();
 }
 listen() {
     this.app.listen(this.port, () => {
@@ -22,6 +24,11 @@ routes(){
             res.json({msg: 'API Working'})
     })
     this.app.use("/api/product", productRoutes)
+}
+
+async dbConnect() {
+   await db.authenticate()
+   console.log("base de datos");
 }
 }
 
