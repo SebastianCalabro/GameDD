@@ -1,6 +1,6 @@
 import { PayloadPost } from "../Actions/postActions"
 interface get {
-    type:"GET_COUNTRY",
+    type:"GET_POSTS",
     payload: PayloadPost
 }
 interface close {
@@ -8,7 +8,7 @@ interface close {
     payload:string
 }
 interface not{
-    type: "NO_COUNTRY",
+    type: "NO_POST",
     payload:boolean
 }
 export type Action = get | close | not
