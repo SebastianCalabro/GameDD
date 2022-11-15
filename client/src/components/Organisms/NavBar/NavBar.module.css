@@ -1,0 +1,12 @@
+.nav_container{
+    height: 4rem;
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 0;
+    border: 1px solid #FF3889;
+}
+.span_random{
+    color: #FF3889;
+    font-weight: bold;
+    transform: scale(3);
+}
